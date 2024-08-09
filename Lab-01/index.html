@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <title>Beatrice's Personal Page</title>
+</head>
+<body>
+    <!-- START OF NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#about-me">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#feedback">Feedback</a>
+        </div>
+        <div class="nav-right">
+            <a href="https://github.com/beatricebretti" target="_blank">
+                <img src="media/github-icon.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://linkedin.com/in/beatricevaldesbretti" target="_blank">
+                <img src="media/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="mailto:bavaldes1@miuandes.cl">
+                <img src="media/email-icon.png" alt="Email" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/beavaldesbretti" target="_blank">
+                <img src="media/instagram-icon.png" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+    </nav>
+    <!-- START OF HEADER -->
+    <header class="header">
+        <div class="container">
+            <table class="center">
+                <tr>
+                    <td><!-- i used this to build 2 columns --></td>
+                    <td><!-- i used this to build 2 columns --></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src= "media/imagen.png" class="circle-image" width="250">
+                    </td>
+                    <td class="column">
+                        <p class="text-1">Beatrice Valdes Bretti</p>
+                        <p class="text-2">Computer Science Student</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </header>
+    <!-- START OF ABOUTME -->
+    <section class="about-me" id="about-me">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm <span class="highlight">Beatrice Valdes Bretti</span>, a <span class="highlight">Computer Science</span> student at 
+                <span class="highlight">Universidad de los Andes</span>, since 2022. I'm passionate about technology, coding and teaching. 
+                I have experience in various programming languages, and I love solving complex problems and building innovative solutions. 
+                I'm always eager to learn new things and take on challenging projects. In my free time, I enjoy traveling, photography, skiing, and 
+                learning new languages. I currently speak Spanish, English, Italian, Swedish, a little bit of Japanese, and I'm learning Russian.
+            </p>
+            <!-- START OF SKILLS -->
+            <h2>Skills</h2>
+            <table class="about-table center" id="skills">
+                <tr>
+                    <td class="table-head">Skill</td>
+                    <td class="table-head">Level</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>HTML & CSS</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>C++</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>React.js</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Machine Learning</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>SQL</td>
+                    <td>Intermediate</td>
+                </tr>
+            </table>
+            <!-- START OF EXPERIENCE -->
+            <h2>Experience</h2>
+            <div class="job" id="experience">
+                <h3><a href="https://www.ocilabs.cl" target="_blank" class="job-link">Ocilabs</a> Programming Workshop Tutor</h3>
+                <p>
+                    Part of the tutor staff of the basic level area of the workshop. Every week I teach 
+                    Scratch and diferent topics related to technology to secondary education students.
+                </p>
+                <p><strong><a href="https://sccc.cl" target="_blank" class="job-link">Sociedad Chilena de Ciencia de la Computación</a></strong> / Apr 2022 - Present</p>
+                <hr class="job-divider">
+            </div>
+            <div class="job">
+                <h3>Data Science Intern</h3>
+                <p>
+                    In charge of developing a learning algorithm using basic Machine Learning techniques in 
+                    order to find useful insights for predictive maintainance. 
+                </p>
+                <p><strong><a href="https://www.komatsucummins.cl" target="_blank" class="job-link">Komatsu Cummins</a></strong> / Jan 2023 - Mar 2023</p>
+                <hr class="job-divider">
+            </div>
+            <div class="job">
+                <h3>Course Assistant</h3>
+                <p>
+                    Been a course assistant of many university courses such as Electromagnetism, Introduction to Physics, 
+                    Introduction to programming, Information Systems and Data Structures, both as reviewing and 
+                    teaching the class material to students and marking their laboratories and exams.
+                </p>
+                <p><strong><a href="https://usm.cl" target="_blank" class="job-link">Universidad Técnica Federico Santa María</a></strong> / Mar 2021 - Jun 2024</p>
+                <hr class="job-divider">
+            </div>
 
+        </div>
+    </section>
+    <!-- START OF INTERACTIVE PART -->
+    <section class="comment" id="feedback">
+        <h2>Feedback</h2>
+        <label for="userInput">Have we worked before? Give me feedback/recommendations:</label>
+        <input type="text" id="userInput" placeholder="Type something...">
+        <button onclick="updateText()">Send</button>
+        <div class="content" id="displayText">
+            .
+        </div>
+        <script>
+            function updateText() {
+                var userInput = document.getElementById('userInput').value;
+                document.getElementById('displayText').textContent = userInput;
+            }
+    </script>
+    </section>
+</body>
+</html>
